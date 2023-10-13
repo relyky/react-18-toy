@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import logo from 'assets/logo.svg';
+import { Counter } from 'components/counter/Counter';
 import styles from './home.module.css'
 
 export default function HomePage() {
   return (
     <div className={styles.App}>
       <header className={styles['App-header']}>
-        <p>version 5</p>
+        <p>version 6</p>
         <img src={logo} className={styles["App-logo"]} alt="logo" />
         <Counter />
         <p>
