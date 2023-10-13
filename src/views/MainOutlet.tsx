@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import type { FC } from 'react'
-import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
 export const Layout: FC = () => {
@@ -12,11 +12,12 @@ export const Layout: FC = () => {
                     <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" color="inherit" component="div" sx={{ mr:2 }}>
-                        React.v18 Toy
+                    <Typography variant="h6" color="inherit" component="div" sx={{ mr: 2 }}>
+                        <Link href="#/" color="inherit" underline="none">
+                            React.v18 Toy
+                        </Link>
                     </Typography>
-                    <Button href="#/" color="inherit">Home</Button>
-                    <Button href="#/hello" color="inherit">Hello</Button>
+                    <Button href="#/vis-network" color="inherit">Vis Network</Button>
                     <Button href="#/about" color="inherit">About</Button>
                 </Toolbar>
             </AppBar>

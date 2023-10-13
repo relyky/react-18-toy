@@ -1,9 +1,10 @@
 import React from 'react'
-import { Route, Link, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import { Container, Typography, Button } from '@mui/material'
 import HomePage from './views/Home/HomePage'
 import MainOutlet from './views/MainOutlet'
 import About from 'views/About/About'
-import { Container, Typography, Button } from '@mui/material'
+import VisNetwork from 'views/VisNetwork/AppForm'
 import type { FC } from 'react'
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<MainOutlet />}>
         <Route index element={<HomePage />} />
+        <Route path='/vis-network' element={<VisNetwork />} />
         <Route path='/about' element={<About />} />
       </Route>
       <Route path="*" element={<NotFound />} />
