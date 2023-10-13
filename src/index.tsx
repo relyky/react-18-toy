@@ -10,10 +10,12 @@ import './index.css';
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter>
+      {/* ※gh-pages 不支援 BrowserRouter 故採用 HashRouter。 */}
+      <HashRouter> 
         <App />
       </HashRouter>
     </Provider>
