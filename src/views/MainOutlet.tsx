@@ -17,6 +17,7 @@ export const Layout: FC = () => {
                             React.v18 Toy
                         </Link>
                     </Typography>
+                    <Button href="#/indexed-db" color="inherit">Indexed DB</Button>
                     <Button href="#/vis-network" color="inherit">Vis Network</Button>
                     <Button href="#/about" color="inherit">About</Button>
                     <Box sx={{ flexGrow: 1 }}></Box>

@@ -4,6 +4,7 @@ import HomePage from 'views/Home/HomePage'
 import MainOutlet from 'views/MainOutlet'
 import NotFound from 'views/NotFound'
 import About from 'views/About/About'
+import IndexedDB from 'views/IndexedDB/AppForm'
 import VisNetwork from 'views/VisNetwork/AppForm'
 
 //※gh-pages 不支援 BrowserRouter 故採用 HashRouter。
@@ -13,6 +14,7 @@ const router = createHashRouter([
     element: <MainOutlet />,
     children: [
       { index: true, element: <HomePage /> },
+      { path: "/indexed-db", element: <IndexedDB /> },
       { path: "/vis-network", element: <VisNetwork /> },
       { path: "/about", element: <About /> },
     ],
