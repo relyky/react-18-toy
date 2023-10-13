@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import type { FC } from 'react'
-import { AppBar, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
 export const Layout: FC = () => {
