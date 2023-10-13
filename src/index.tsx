@@ -7,11 +7,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href') as string
 const container = document.getElementById('root')!;
 const root = createRoot(container);
-
-console.log('baseUrl →', baseUrl)
 
 root.render(
   <React.StrictMode>
