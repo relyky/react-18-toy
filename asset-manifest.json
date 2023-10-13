@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-18-toy/static/css/main.ac659912.css",
-    "main.js": "/react-18-toy/static/js/main.f96b1b9c.js",
+    "main.js": "/react-18-toy/static/js/main.c4ad14ea.js",
     "static/js/787.4c3d63c3.chunk.js": "/react-18-toy/static/js/787.4c3d63c3.chunk.js",
     "static/media/logo.svg": "/react-18-toy/static/media/logo.b2e5a01e505f739f1484b881277d5186.svg",
     "index.html": "/react-18-toy/index.html",
     "main.ac659912.css.map": "/react-18-toy/static/css/main.ac659912.css.map",
-    "main.f96b1b9c.js.map": "/react-18-toy/static/js/main.f96b1b9c.js.map",
+    "main.c4ad14ea.js.map": "/react-18-toy/static/js/main.c4ad14ea.js.map",
     "787.4c3d63c3.chunk.js.map": "/react-18-toy/static/js/787.4c3d63c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac659912.css",
-    "static/js/main.f96b1b9c.js"
+    "static/js/main.c4ad14ea.js"
   ]
 }
