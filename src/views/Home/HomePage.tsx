@@ -7,7 +7,6 @@ export default function HomePage() {
   return (
     <div className={styles.App}>
       <header className={styles['App-header']}>
-        <p>version 7</p>
         <img src={logo} className={styles["App-logo"]} alt="logo" />
         <Counter />
         <p>
