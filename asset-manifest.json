@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-18-toy/static/css/main.acd44d93.css",
-    "main.js": "/react-18-toy/static/js/main.d8167c95.js",
+    "main.css": "/react-18-toy/static/css/main.7863672a.css",
+    "main.js": "/react-18-toy/static/js/main.17c87fc1.js",
     "static/js/787.4c3d63c3.chunk.js": "/react-18-toy/static/js/787.4c3d63c3.chunk.js",
     "static/media/roboto-latin-500-normal.woff2": "/react-18-toy/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/react-18-toy/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -61,12 +61,12 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/react-18-toy/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/logo.svg": "/react-18-toy/static/media/logo.b2e5a01e505f739f1484b881277d5186.svg",
     "index.html": "/react-18-toy/index.html",
-    "main.acd44d93.css.map": "/react-18-toy/static/css/main.acd44d93.css.map",
-    "main.d8167c95.js.map": "/react-18-toy/static/js/main.d8167c95.js.map",
+    "main.7863672a.css.map": "/react-18-toy/static/css/main.7863672a.css.map",
+    "main.17c87fc1.js.map": "/react-18-toy/static/js/main.17c87fc1.js.map",
     "787.4c3d63c3.chunk.js.map": "/react-18-toy/static/js/787.4c3d63c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.acd44d93.css",
-    "static/js/main.d8167c95.js"
+    "static/css/main.7863672a.css",
+    "static/js/main.17c87fc1.js"
   ]
 }
