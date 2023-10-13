@@ -2,20 +2,23 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-import { BrowserRouter } from "react-router-dom"
+import { HashRouter } from "react-router-dom"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
+const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href') as string
 const container = document.getElementById('root')!;
 const root = createRoot(container);
+
+console.log('baseUrl →', baseUrl)
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );

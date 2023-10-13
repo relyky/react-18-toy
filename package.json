@@ -2,7 +2,7 @@
   "name": "react-18-toy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://relyky.github.io/react-18-toy/",
+  "homepage": "https://relyky.github.io/react-18-toy/#",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",

@@ -14,11 +14,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MainOutlet />}>
           <Route index element={<HomePage />} />
-          <Route path="/hello" element={<div>
-            <h1>Hello World</h1>
-            <Link to="/about">About Us</Link>
-          </div>} />
-          <Route path='about' element={<div>About</div>} />
+          <Route path="/hello" element={
+            <div>
+              <h1>Hello World</h1>
+              <Link to="/about">About Us</Link>
+            </div>} />
+          <Route path='/about' element={<div>About</div>} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
