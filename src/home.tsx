@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
-import './home.css';
+import styles from './home.module.css'
 
 export default function HomePage() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={styles.App}>
+      <header className={styles['App-header']}>
         <p>version 5</p>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className={styles["App-logo"]} alt="logo" />
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -16,7 +16,7 @@ export default function HomePage() {
         <span>
           <span>Learn </span>
           <a
-            className="App-link"
+            className={styles["App-link"]}
             href="https://reactjs.org/"
             target="_blank"
             rel="noopener noreferrer"
@@ -25,7 +25,7 @@ export default function HomePage() {
           </a>
           <span>, </span>
           <a
-            className="App-link"
+            className={styles["App-link"]}
             href="https://redux.js.org/"
             target="_blank"
             rel="noopener noreferrer"
@@ -34,7 +34,7 @@ export default function HomePage() {
           </a>
           <span>, </span>
           <a
-            className="App-link"
+            className={styles["App-link"]}
             href="https://redux-toolkit.js.org/"
             target="_blank"
             rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export default function HomePage() {
           </a>
           ,<span> and </span>
           <a
-            className="App-link"
+            className={styles["App-link"]}
             href="https://react-redux.js.org/"
             target="_blank"
             rel="noopener noreferrer"
