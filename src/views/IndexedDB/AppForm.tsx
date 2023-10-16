@@ -2,21 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button, Container, Grid, Typography } from '@mui/material'
 import { initDB, useIndexedDB } from 'react-indexed-db-hook'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
-
-interface IMyNode {
-  id: number
-  label: string
-  group: string
-}
-
-interface IMyEdge {
-  sn: number
-  from: number
-  to: number
-  group: string
-  label: string
-  arrows: string
-}
+import type { IMyEdge, IMyNode } from 'interface'
 
 const nodeColumns: GridColDef[] = [
   { field: 'id', headerName: 'ID' },
