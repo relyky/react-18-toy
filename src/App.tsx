@@ -8,6 +8,7 @@ import IndexedDB from 'views/IndexedDB/AppForm'
 import VisNetwork from 'views/VisNetwork/AppForm'
 import { initDB } from 'react-indexed-db-hook'
 
+//§ Indexed DB
 const DBConfig = {
   name: "MyDB",
   version: 1,
@@ -36,6 +37,7 @@ const DBConfig = {
 
 initDB(DBConfig);
 
+//§ AppRouters
 //※gh-pages 不支援 BrowserRouter 故採用 HashRouter。
 const router = createHashRouter([
   {

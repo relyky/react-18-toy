@@ -21,7 +21,7 @@ export const Layout: FC = () => {
                     <Button href="#/vis-network" color="inherit">Vis Network</Button>
                     <Button href="#/about" color="inherit">About</Button>
                     <Box sx={{ flexGrow: 1 }}></Box>
-                    <span>v0.09</span>
+                    <span>v0.1.0</span>
                 </Toolbar>
             </AppBar>
             <main>
