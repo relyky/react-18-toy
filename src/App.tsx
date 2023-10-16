@@ -6,6 +6,35 @@ import NotFound from 'views/NotFound'
 import About from 'views/About/About'
 import IndexedDB from 'views/IndexedDB/AppForm'
 import VisNetwork from 'views/VisNetwork/AppForm'
+import { initDB } from 'react-indexed-db-hook'
+
+const DBConfig = {
+  name: "MyDB",
+  version: 1,
+  objectStoresMeta: [
+    {
+      store: "nodes",
+      storeConfig: { keyPath: "id", autoIncrement: false },
+      storeSchema: [
+        { name: "label", keypath: "label", options: { unique: false } },
+        { name: "group", keypath: "group", options: { unique: false } },
+      ],
+    },
+    {
+      store: "edges",
+      storeConfig: { keyPath: "sn", autoIncrement: true },
+      storeSchema: [
+        { name: "from", keypath: "from", options: { unique: false } },
+        { name: "to", keypath: "to", options: { unique: false } },
+        { name: "label", keypath: "label", options: { unique: false } },
+        { name: "group", keypath: "group", options: { unique: false } },
+        { name: "arrows", keypath: "arrows", options: { unique: false } },
+      ],
+    },
+  ],
+};
+
+initDB(DBConfig);
 
 //※gh-pages 不支援 BrowserRouter 故採用 HashRouter。
 const router = createHashRouter([
