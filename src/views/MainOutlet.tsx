@@ -19,6 +19,7 @@ export const Layout: FC = () => {
                     </Typography>
                     <Button href="#/indexed-db" color="inherit">Indexed DB</Button>
                     <Button href="#/vis-network" color="inherit">Vis Network</Button>
+                    <Button href="#/affect-network" color="inherit">Affect Network</Button>
                     <Button href="#/about" color="inherit">About</Button>
                     <Box sx={{ flexGrow: 1 }}></Box>
                     <span>v0.1.0</span>

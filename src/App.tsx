@@ -6,6 +6,7 @@ import NotFound from 'views/NotFound'
 import About from 'views/About/About'
 import IndexedDB from 'views/IndexedDB/AppForm'
 import VisNetwork from 'views/VisNetwork/AppForm'
+import AffectNetwork from 'views/AffectNetwork/AppForm'
 import { initDB } from 'react-indexed-db-hook'
 
 //§ Indexed DB
@@ -47,6 +48,7 @@ const router = createHashRouter([
       { index: true, element: <HomePage /> },
       { path: "/indexed-db", element: <IndexedDB /> },
       { path: "/vis-network", element: <VisNetwork /> },
+      { path: "/affect-network", element: <AffectNetwork /> },
       { path: "/about", element: <About /> },
     ],
   },
