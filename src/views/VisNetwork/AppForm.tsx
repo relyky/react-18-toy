@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { initDB, useIndexedDB } from 'react-indexed-db-hook'
+import { useIndexedDB } from 'react-indexed-db-hook'
 import { Network } from 'vis-network'
 import type { Data } from 'vis-network'
 import type { IMyEdge, IMyNode } from 'interface'

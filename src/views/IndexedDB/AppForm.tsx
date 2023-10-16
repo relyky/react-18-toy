@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Container, Grid, Typography } from '@mui/material'
-import { initDB, useIndexedDB } from 'react-indexed-db-hook'
+import { useIndexedDB } from 'react-indexed-db-hook'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import type { IMyEdge, IMyNode } from 'interface'
 
@@ -63,12 +63,12 @@ export default function IndexedDB_AppForm() {
             disableRowSelectionOnClick
             initialState={{
               pagination: {
-                paginationModel: {  
+                paginationModel: {
                   pageSize: 10,
                 },
               },
             }}
-          /> 
+          />
 
         </Grid>
       </Grid>
