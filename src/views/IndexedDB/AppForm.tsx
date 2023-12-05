@@ -38,6 +38,7 @@ export default function IndexedDB_AppForm() {
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
 
+          <Typography variant='h5'>Nodes</Typography>
           <DataGrid
             rows={nodeList}
             columns={nodeColumns}
@@ -55,6 +56,7 @@ export default function IndexedDB_AppForm() {
         </Grid>
         <Grid item xs={12} md={6}>
 
+          <Typography variant='h5'>Edges</Typography>
           <DataGrid
             rows={edgeList}
             columns={edgeColumns}
