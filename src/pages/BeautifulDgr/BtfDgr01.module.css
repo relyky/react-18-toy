@@ -1,0 +1,3 @@
+.my-custom-link-class :global path.bi-link-path {
+    stroke: red !important;
+}
