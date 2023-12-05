@@ -7,6 +7,7 @@ import About from 'pages/About/About'
 import IndexedDB from 'pages/IndexedDB/AppForm'
 import VisNetwork from 'pages/VisNetwork/AppForm'
 import AffectNetwork from 'pages/AffectNetwork/AppForm'
+import BeautifulDgr from 'pages/BeautifulDgr/AppForm'
 import { initDB } from 'react-indexed-db-hook'
 
 //§ Indexed DB
@@ -49,6 +50,7 @@ const router = createHashRouter([
       { path: "/indexed-db", element: <IndexedDB /> },
       { path: "/vis-network", element: <VisNetwork /> },
       { path: "/affect-network", element: <AffectNetwork /> },
+      { path: "/beautiful-dgr", element: <BeautifulDgr /> },
       { path: "/about", element: <About /> },
     ],
   },
