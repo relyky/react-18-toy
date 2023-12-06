@@ -15,12 +15,12 @@ const initialNodes: Node[] = [
   {
     id: '2',
     data: { label: 'World' },
-    position: { x: 50, y: 200 },
+    position: { x: -50, y: 200 },
   },
   {
     id: '3',
     type: 'textUpdater',
-    position: { x: 200, y: 100 },
+    position: { x: 150, y: 100 },
     data: { label: '我的標題', value: 123 }
   },
 ];

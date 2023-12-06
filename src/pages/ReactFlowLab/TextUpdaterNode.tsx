@@ -19,14 +19,14 @@ function TextUpdaterNode(props: NodeProps) {
 
     return (
         <div className={styles["text-updater-node"]}>
-            <Handle type="target" position={Position.Top} isConnectable={props.isConnectable} />
+            <Handle type="target" position={Position.Left} isConnectable={props.isConnectable} />
             <div>
                 <label htmlFor="text">{data.label ?? 'Text'}</label>
                 <input id="text" name="text" value={data.value} onChange={handleChange} className="nodrag" />
             </div>
             <Handle 
                 type="source" 
-                position={Position.Bottom} 
+                position={Position.Right} 
                 isConnectable={props.isConnectable} />
         </div>
     );
