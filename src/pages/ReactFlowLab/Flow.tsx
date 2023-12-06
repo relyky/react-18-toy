@@ -31,8 +31,6 @@ const initialEdges: Edge[] = [
   //{ id: '3-2', source: '3', target: '2', label: '來哦' },
 ];
 
-// we define the nodeTypes outside of the component to prevent re-renderings
-// you could also use useMemo inside the component
 const nodeTypes: NodeTypes = { textUpdater: TextUpdaterNode, };
 const edgeTypes: EdgeTypes = { 'custom-edge': CustomEdge, }
 
@@ -47,11 +45,6 @@ export function Flow() {
     },
     [setEdges],
   );
-
-  // const onConnect = useCallback(
-  //   (connection: Edge | Connection) => setEdges((eds) => addEdge(connection, eds)),
-  //   [setEdges]
-  // )
 
   return (
     <Paper style={{ height: '600px' }}>
