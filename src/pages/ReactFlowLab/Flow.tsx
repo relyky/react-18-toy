@@ -26,9 +26,8 @@ const initialNodes: Node[] = [
 ];
 
 const initialEdges: Edge[] = [
-  { id: '1-2', source: '1', target: '2', label: 'to the' /*, type: 'step' */ },
-  { id: '1-3', source: '1', target: '3', label: '去吧', type:'custom-edge' },
-  //{ id: '3-2', source: '3', target: '2', label: '來哦' },
+  { id: '1-2', source: '1', target: '2', label: 'to the', animated: true },
+  { id: '1-3', source: '1', target: '3', label: '去吧', animated: true, type: 'custom-edge' },
 ];
 
 const nodeTypes: NodeTypes = { textUpdater: TextUpdaterNode, };
@@ -40,7 +39,7 @@ export function Flow() {
 
   const onConnect = useCallback(
     (connection: Edge | Connection) => {
-      const edge = { ...connection, type: 'custom-edge' };
+      const edge = { ...connection, animated: true, type: 'custom-edge' };
       setEdges((eds) => addEdge(edge, eds));
     },
     [setEdges],
