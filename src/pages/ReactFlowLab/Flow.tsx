@@ -23,35 +23,35 @@ const initialNodes: Node[] = [
     position: { x: 200, y: 100 },
     data: { label: '我的標題', value: 123 }
   },
+  { 
+    id: '3', 
+    type: 'textUpdater', 
+    position: { x: 200, y: 0 }, 
+    data: { label:'我的標題', value: 123 } 
+  },
 ];
 
 const initialEdges: Edge[] = [
-  { id: '1-2', source: '1', target: '2', label: 'to the' /*, type: 'step' */ },
-  { id: '1-3', source: '1', target: '3', label: '去吧', type:'custom-edge' },
-  //{ id: '3-2', source: '3', target: '2', label: '來哦' },
+   { id: '1-2', source: '1', target: '2', label: 'to the' /*, type: 'step' */ },
 ];
 
-// we define the nodeTypes outside of the component to prevent re-renderings
-// you could also use useMemo inside the component
-const nodeTypes: NodeTypes = { textUpdater: TextUpdaterNode, };
-const edgeTypes: EdgeTypes = { 'custom-edge': CustomEdge, }
-
 export function Flow() {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, setNodes] = useState(initialNodes)
+  const [edges, setEdges] = useState(initialEdges)
+
+  const onNodesChange = useCallback(
+    (changes: NodeChange[]) => setNodes((nds) => applyNodeChanges(changes, nds)),
+    [setNodes],
+  )
+  const onEdgesChange = useCallback(
+    (changes: EdgeChange[]) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+    [setEdges],
+  )
 
   const onConnect = useCallback(
-    (connection: Edge | Connection) => {
-      const edge = { ...connection, type: 'custom-edge' };
-      setEdges((eds) => addEdge(edge, eds));
-    },
+    (connection: Edge | Connection) => setEdges((eds) => addEdge(connection, eds)),
     [setEdges],
   );
-
-  // const onConnect = useCallback(
-  //   (connection: Edge | Connection) => setEdges((eds) => addEdge(connection, eds)),
-  //   [setEdges]
-  // )
 
   return (
     <Paper style={{ height: '600px' }}>
@@ -61,8 +61,6 @@ export function Flow() {
         edges={edges}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        nodeTypes={nodeTypes}
-        edgeTypes={edgeTypes}
         fitView>
         <Background />
         <Controls />
