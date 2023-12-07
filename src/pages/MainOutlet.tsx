@@ -40,6 +40,7 @@ export const Layout: FC = () => {
                         onClose={closeMenu}>
                         <MenuItem onClick={closeMenu} component={RouterLink} to="/react-flow">教學</MenuItem>
                         <MenuItem onClick={closeMenu} component={RouterLink} to="/react-flow-2">Delete Middle Node</MenuItem>
+                        <MenuItem onClick={closeMenu} component={RouterLink} to="/react-flow-3">Updating Nodes</MenuItem>
                     </Menu>
 
                     <Button href="#/affect-network" color="inherit">Affect Network</Button>
