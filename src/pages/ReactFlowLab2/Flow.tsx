@@ -63,7 +63,7 @@ export default function Flow() {
         <Box>
             <Box>{`選取Node再按<Delete>或<Backspace>刪除。`}</Box>
 
-            <Paper sx={{ height: '600px', p: 2, mb: 2 }}>
+            <Paper sx={{ height: '500px', p: 2, mb: 2 }}>
                 <ReactFlow
                     nodes={nodes}
                     edges={edges}
