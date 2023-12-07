@@ -1,4 +1,3 @@
-import React from 'react'
 import { Outlet } from 'react-router-dom'
 import type { FC } from 'react'
 import { AppBar, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material'
@@ -20,6 +19,7 @@ export const Layout: FC = () => {
                     <Button href="#/indexed-db" color="inherit">Indexed DB</Button>
                     <Button href="#/vis-network" color="inherit">Vis Network</Button>
                     <Button href="#/react-flow" color="inherit">React Flow</Button>
+                    <Button href="#/react-flow-2" color="inherit">React Flow 2</Button>
                     <Button href="#/affect-network" color="inherit">Affect Network</Button>
                     <Button href="#/about" color="inherit">About</Button>
                     <Box sx={{ flexGrow: 1 }}></Box>

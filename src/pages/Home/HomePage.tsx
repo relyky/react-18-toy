@@ -1,6 +1,5 @@
-import React from 'react';
-import logo from 'assets/logo.svg';
-import { Counter } from 'components/counter/Counter';
+import logo from 'assets/logo.svg'
+import { Counter } from 'components/counter/Counter'
 import styles from './HomePage.module.css'
 
 export default function HomePage() {

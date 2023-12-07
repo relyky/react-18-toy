@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import styled from '@emotion/styled'
 import { Container, Typography } from '@mui/material'
 import type { IVisNode, IVisEdge, INodeState, IAffectRelation } from 'interface'

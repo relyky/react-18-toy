@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useIndexedDB } from 'react-indexed-db-hook'
 import { Network } from 'vis-network'
 import type { Data } from 'vis-network'
