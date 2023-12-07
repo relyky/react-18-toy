@@ -6,7 +6,7 @@ import 'reactflow/dist/style.css'
 export default function ReactFlowLab_AppForm() {
   return (
     <Container>
-        <Typography variant='h3'>React Flow Lab - 2</Typography>
+        <Typography variant='h3'>React Flow Lab - Delete Middle Node</Typography>
         <Flow />
     </Container>
   )
