@@ -1,5 +1,5 @@
 import { Container, Typography } from '@mui/material'
-import { Flow } from './Flow'
+import Flow from './Flow'
 // CSS
 import 'reactflow/dist/style.css'
 

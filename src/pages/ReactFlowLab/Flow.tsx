@@ -33,7 +33,7 @@ const initialEdges: Edge[] = [
 const nodeTypes: NodeTypes = { textUpdater: TextUpdaterNode, };
 const edgeTypes: EdgeTypes = { 'custom-edge': CustomEdge, }
 
-export function Flow() {
+export default function Flow() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
