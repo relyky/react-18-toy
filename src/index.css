@@ -11,3 +11,9 @@
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+
+/* 隱藏 TradingView Logo */
+.tv-widget-chart__copyrightingContainer {
+  display:none !important;
+}
