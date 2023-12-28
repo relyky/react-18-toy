@@ -4,6 +4,7 @@ import { Box, Container, Typography } from '@mui/material'
 import { AdvancedRealTimeChart, TickerTape } from 'react-ts-tradingview-widgets'
 import type { CopyrightStyles, TickerTapeSymbol } from 'react-ts-tradingview-widgets'
 import Ticker from './MyTicker';
+import MyTradingViewWidget from './MyTradingViewWidget';
 
 const copyrightStyles: CopyrightStyles = {
   parent: {
@@ -41,25 +42,25 @@ export default function TradingViewLab_AppForm() {
       <Typography variant='h3'>Trading View Lab</Typography>
 
       {/* 報價條小工具 */}
-      <TickerTape
+      {/* <TickerTape
         symbols={tickerSymbols}
         locale='zh_TW'
         largeChartUrl={`${window.location.origin}/react-18-toy/#/trading-view`}
-        copyrightStyles={copyrightStyles} />
+        copyrightStyles={copyrightStyles} /> */}
 
       <Box sx={{ mb: 1 }}></Box>
 
       {/* 行情報價小工具 */}
-      <Ticker
+      {/* <Ticker
         symbols={tickerSymbols}
         locale='zh_TW'
         largeChartUrl={`${window.location.origin}/react-18-toy/#/trading-view`}
-        copyrightStyles={copyrightStyles} />
+        copyrightStyles={copyrightStyles} /> */}
 
       <Box sx={{ mb: 1 }}></Box>
 
       {/* 高級即時圖表小工具 */}
-      {chartSymbol &&
+      {/* {chartSymbol &&
         <AdvancedRealTimeChart
           autosize={false}
           width='100%'
@@ -67,12 +68,10 @@ export default function TradingViewLab_AppForm() {
           locale='zh_TW'
           symbol={chartSymbol!}
           copyrightStyles={copyrightStyles}
-        />}
+        />} */}
 
-      {/* <TradingViewWidget /> */}
+      <MyTradingViewWidget />
 
-      {/* tail */}
-      <Box sx={{ p: 3, backgroundColor: 'error.main', color: 'error.contrastText' }}>TAIL</Box>
     </Container>
   )
 }

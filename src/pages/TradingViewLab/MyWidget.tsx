@@ -3,7 +3,7 @@ import Copyright, { CopyrightProps } from "./MyCopyright";
 
 interface WidgetProps {
   scriptHTML: unknown;
-  scriptSRC?: string;
+  scriptSRC: string;
   containerId?: string;
   type?: "Widget" | "MediumWidget";
   copyrightProps: CopyrightProps;
@@ -13,7 +13,7 @@ declare const TradingView: any;
 
 const Widget: React.FC<WidgetProps> = ({
   scriptHTML,
-  scriptSRC = "https://s3.tradingview.com/external-embedding/embed-widget-tickers.js",
+  scriptSRC,
   containerId,
   type,
   copyrightProps,

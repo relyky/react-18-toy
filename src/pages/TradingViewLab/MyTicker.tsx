@@ -65,6 +65,7 @@ const Ticker: React.FC<TickerExProps> = ({
                 symbols,
                 ...props,
             }}
+            scriptSRC="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
             copyrightProps={{
                 copyrightStyles,
                 href: `https://www.tradingview.com/`,
