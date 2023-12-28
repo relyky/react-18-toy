@@ -44,6 +44,7 @@ export const Layout: FC = () => {
                     </Menu>
 
                     <Button href="#/affect-network" color="inherit">Affect Network</Button>
+                    <Button href="#/trading-view" color="inherit">Trading View</Button>
                     <Button href="#/about" color="inherit">About</Button>
                     <Box sx={{ flexGrow: 1 }}></Box>
                     <span>v0.1.0</span>

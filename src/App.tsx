@@ -9,6 +9,7 @@ import AffectNetwork from 'pages/AffectNetwork/AppForm'
 import ReactFlowLab from 'pages/ReactFlowLab/AppForm'
 import ReactFlowLab2 from 'pages/ReactFlowLab2/AppForm'
 import ReactFlowLab3 from 'pages/ReactFlowLab3/AppForm'
+import TradingViewLab from 'pages/TradingViewLab/AppForm'
 import { initDB } from 'react-indexed-db-hook'
 
 //§ Indexed DB
@@ -54,6 +55,8 @@ const router = createHashRouter([
       { path: "/react-flow-2", element: <ReactFlowLab2 /> },
       { path: "/react-flow-3", element: <ReactFlowLab3 /> },
       { path: "/affect-network", element: <AffectNetwork /> },
+      { path: "/affect-network", element: <AffectNetwork /> },
+      { path: "/trading-view", element: <TradingViewLab /> },
       { path: "/about", element: <About /> },
     ],
   },
