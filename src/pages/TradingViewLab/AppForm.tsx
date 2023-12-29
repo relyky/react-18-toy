@@ -93,8 +93,9 @@ export default function TradingViewLab_AppForm() {
           copyrightStyles={copyrightStyles}
         />} */}
 
-      <Box typography='body1' sx={{ m: 2 }} >參考：<Link href="https://tw.tradingview.com/widget/">我們的市場小工具就是您的市場小工具。</Link></Box>
-
+      <Box typography='body1' sx={{ m: 2 }}>
+        參考：<Link href="https://tw.tradingview.com/widget/" target='_blank'>我們的市場小工具就是您的市場小工具</Link>。或直接開啟<Link href="https://tw.tradingview.com/chart/b0Z0eSZ3/" target='_blank'>超級圖表</Link>查看。<br />
+      </Box>
     </Container>
   )
 }
