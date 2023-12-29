@@ -1,37 +1,9 @@
 import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Box, Container, Typography } from '@mui/material'
-import { AdvancedRealTimeChart, TickerTape } from 'react-ts-tradingview-widgets'
 import type { CopyrightStyles, TickerTapeSymbol } from 'react-ts-tradingview-widgets'
-import Ticker from './MyTicker';
-import MyTradingViewWidget from './MyTradingViewWidget';
-
-const copyrightStyles: CopyrightStyles = {
-  parent: {
-    display: 'none',
-  },
-  link: {
-    display: 'none',
-  },
-  span: {
-    display: 'none',
-  },
-};
-
-const tickerSymbols: TickerTapeSymbol[] = [
-  {
-    proName: 'NASDAQ:AAPL',
-    title: 'NASDAQ-蘋果'
-  },
-  {
-    proName: 'NASDAQ:MSFT',
-    title: 'NASDAQ-微軟'
-  },
-  {
-    proName: 'TWSE:2330',
-    title: 'TWSE-台積電'
-  },
-]
+import SymbolOverview from './MySymbolOverviewWidget';
+import MyTicker from './MyTicker';
 
 export default function TradingViewLab_AppForm() {
   const [searchParams] = useSearchParams();
@@ -41,23 +13,11 @@ export default function TradingViewLab_AppForm() {
     <Container>
       <Typography variant='h3'>Trading View Lab</Typography>
 
-      {/* 報價條小工具 */}
-      {/* <TickerTape
-        symbols={tickerSymbols}
-        locale='zh_TW'
-        largeChartUrl={`${window.location.origin}/react-18-toy/#/trading-view`}
-        copyrightStyles={copyrightStyles} /> */}
-
-      <Box sx={{ mb: 1 }}></Box>
-
       {/* 行情報價小工具 */}
-      {/* <Ticker
-        symbols={tickerSymbols}
-        locale='zh_TW'
-        largeChartUrl={`${window.location.origin}/react-18-toy/#/trading-view`}
-        copyrightStyles={copyrightStyles} /> */}
+      <MyTicker />
 
-      <Box sx={{ mb: 1 }}></Box>
+      {/* 商品概覽小工具 */}
+      <SymbolOverview />
 
       {/* 高級即時圖表小工具 */}
       {/* {chartSymbol &&
@@ -69,8 +29,6 @@ export default function TradingViewLab_AppForm() {
           symbol={chartSymbol!}
           copyrightStyles={copyrightStyles}
         />} */}
-
-      <MyTradingViewWidget />
 
     </Container>
   )

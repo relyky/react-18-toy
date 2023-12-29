@@ -18,23 +18,27 @@ const copyrightStyles: CopyrightStyles = {
 const defaultSymbols = [
   [
     "Apple",
-    "AAPL|1D"
+    "AAPL|1M"
   ],
   [
     "Google",
-    "GOOGL|1D"
+    "GOOGL|1M"
   ],
   [
     "Microsoft",
-    "MSFT|1D"
+    "MSFT|1M"
   ],
   [
     "華星光",
-    "TPEX:4979|1D"
+    "TPEX:4979|1M"
   ],
   [
     "元太",
-    "TPEX:8069|1D"
+    "TPEX:8069|1M"
+  ],
+  [
+    "台積電",
+    "TWSE:2330|1M"
   ]
 ];
 
