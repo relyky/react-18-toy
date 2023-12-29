@@ -1,78 +1,66 @@
-import React, { memo } from "react";
-import { ColorTheme, Locales } from 'react-ts-tradingview-widgets'
-import type { CopyrightStyles } from 'react-ts-tradingview-widgets'
-import Widget from "./MyWidget";
+// TradingViewWidget.jsx
+import { memo } from 'react';
+import { Box, Typography } from '@mui/material';
+import { CopyrightStyles } from 'react-ts-tradingview-widgets';
+import Widget from "./widgets/MyWidget";
 
-export type TickerExProps = {
-    colorTheme?: ColorTheme;
-    isTransparent?: boolean;
-    showSymbolLogo?: boolean;
-    locale?: Locales;
-    symbols?: TickerSymbols;
-
-    children?: never;
-    largeChartUrl?: string;
-
-    copyrightStyles?: CopyrightStyles;
+const copyrightStyles: CopyrightStyles = {
+    parent: {
+        display: 'none',
+    },
+    link: {
+        display: 'none',
+    },
+    span: {
+        display: 'none',
+    },
 };
 
-export type TickerSymbols = TickerSymbol[];
-
-export type TickerSymbol = {
-    proName: string;
-    title: string;
-};
-
-const defaultSymbols: TickerSymbols = [
+const defaultSymbols = [
     {
-        proName: "FOREXCOM:SPXUSD",
-        title: "S&P 500",
+        "description": "蘋果",
+        "proName": "NASDAQ:AAPL"
     },
     {
-        proName: "FOREXCOM:NSXUSD",
-        title: "Nasdaq 100",
+        "description": "Google",
+        "proName": "NASDAQ:GOOG"
     },
     {
-        proName: "FX_IDC:EURUSD",
-        title: "EUR/USD",
+        "description": "微軟",
+        "proName": "NASDAQ:MSFT"
     },
     {
-        proName: "BITSTAMP:BTCUSD",
-        title: "BTC/USD",
+        "description": "華星光",
+        "proName": "TPEX:4979"
     },
     {
-        proName: "BITSTAMP:ETHUSD",
-        title: "ETH/USD",
+        "description": "元太",
+        "proName": "TPEX:8069"
     },
 ];
 
-const Ticker: React.FC<TickerExProps> = ({
-    colorTheme = "light",
-    isTransparent = false,
-    showSymbolLogo = true,
-    locale = "en",
-    symbols = defaultSymbols,
-    copyrightStyles,
-    ...props
-}) => {
+//§§ 行情報價小工具
+function TradingViewWidget() {
     return (
-        <Widget
-            scriptHTML={{
-                colorTheme,
-                isTransparent,
-                showSymbolLogo,
-                locale,
-                symbols,
-                ...props,
-            }}
-            scriptSRC="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
-            copyrightProps={{
-                copyrightStyles,
-                href: `https://www.tradingview.com/`,
-                spanText: `Quotes`,
-            }}
-        />
+        <Box sx={{mb:1}}>
+            <Typography variant='h6'>行情報價小工具</Typography>
+            <Widget
+                scriptHTML={{
+                    symbols: defaultSymbols,
+                    isTransparent: false,
+                    showSymbolLogo: true,
+                    colorTheme: "light",
+                    locale: "zh_TW"
+                }}
+                scriptSRC="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
+                copyrightProps={{
+                    copyrightStyles,
+                    href: `https://www.tradingview.com/`,
+                    spanText: `Quotes`,
+                }}
+            />
+        </Box>
     );
-};
+}
 
-export default memo(Ticker);
+export default memo(TradingViewWidget);
