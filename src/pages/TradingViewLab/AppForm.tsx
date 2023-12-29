@@ -1,34 +1,11 @@
-import { useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Box, Container, Grid, Typography, Link, Divider } from '@mui/material'
-import SymbolOverview from './MySymbolOverview';
-import Ticker from './MyTicker';
+import Ticker from './MyTicker'
+import SymbolOverview from './MySymbolOverview'
 import MiniSymbolOverview from './MyMiniSymbolOverview'
 import TechnicalAnalysis from './MyTechnicalAnalysis'
 import Hotlists from './MyHotlists'
-
-const defaultSymbols = [
-  {
-    "description": "蘋果",
-    "proName": "NASDAQ:AAPL"
-  },
-  {
-    "description": "Google",
-    "proName": "NASDAQ:GOOG"
-  },
-  {
-    "description": "微軟",
-    "proName": "NASDAQ:MSFT"
-  },
-  {
-    "description": "華星光",
-    "proName": "TPEX:4979"
-  },
-  {
-    "description": "元太",
-    "proName": "TPEX:8069"
-  },
-];
 
 export default function TradingViewLab_AppForm() {
   const [searchParams] = useSearchParams();
@@ -115,8 +92,6 @@ export default function TradingViewLab_AppForm() {
           symbol={chartSymbol!}
           copyrightStyles={copyrightStyles}
         />} */}
-
-
 
       <Box typography='body1' sx={{ m: 2 }} >參考：<Link href="https://tw.tradingview.com/widget/">我們的市場小工具就是您的市場小工具。</Link></Box>
 
